@@ -1,20 +1,20 @@
-
-
 # Bluetooth Smart Car with Obstacle Avoidance Capabilities - Public Overview
 
-Public technical overview of an Arduino-based Bluetooth smart car controlled with a PlayStation 5 controller. The project includes manual driving, analog acceleration, steering control, headlights, safety behavior, and an autonomous obstacle-avoidance mode using an ultrasonic sensor.
+Public technical overview of an Arduino/C++ Bluetooth smart car controlled with a PlayStation 5 controller. The project includes manual driving, analog acceleration, steering control, headlights, safety behavior, and an autonomous obstacle-avoidance mode using an ultrasonic sensor.
 
 <p align="center">
   <img src="assets/smart-car-with-ps5-controller.jpg" width="520" alt="Bluetooth smart car with PlayStation 5 controller" />
 </p>
 
-<p align="center">
-  <a href=https://github.com/user-attachments/assets/d0e8710e-04a5-4467-ba75-e9c4699e6d67>Manual control demo</a> ·
-  <a href=https://github.com/user-attachments/assets/47ea8891-b305-4096-ac5c-5ad1a4ba3f4d>Obstacle avoidance demo</a>
-</p>
+## Demo Videos
 
+### Manual Bluetooth Control
 
+https://github.com/user-attachments/assets/1adfdc49-4890-4309-a1f3-69dc6789783e
 
+### Obstacle Avoidance Mode
+
+https://github.com/user-attachments/assets/57011fe0-489b-4c29-a6c8-5f0f7d069c5e
 > The full source code is private due to intellectual property considerations. This repository documents the project’s functionality, architecture, technologies, hardware setup, demo media, and implementation approach without exposing private source code, generated files, or internal Git history.
 
 ---
@@ -24,38 +24,6 @@ Public technical overview of an Arduino-based Bluetooth smart car controlled wit
 This project presents a Bluetooth-controlled smart car built around an Arduino Uno and the ATmega328P microcontroller. The car can be manually controlled with a PlayStation 5 controller and can also switch into an autonomous obstacle-avoidance mode.
 
 The system combines embedded C++ programming, wireless controller communication, motor control, steering control, ultrasonic distance sensing, LED control, and a 3D-printed chassis into a compact smart-car prototype.
-
----
-
-## Demo Videos
-
-### Manual Bluetooth Control Demo
-
-The manual demo shows the car being controlled through the PlayStation 5 controller. The controller is used for forward movement, reverse movement, steering, headlights, and mode switching.
-
-<p align="center">
-  <a href="assets/bt-smart-car-manual-control-demo.mov">
-    <img src="assets/manual-control-demo-frame.jpg" width="420" alt="Manual Bluetooth control demo frame" />
-  </a>
-</p>
-
-<p align="center">
-  <strong>Video:</strong> <a href="assets/bt-smart-car-manual-control-demo.mov">bt-smart-car-manual-control-demo.mov</a>
-</p>
-
-### Obstacle Avoidance Demo
-
-The obstacle-avoidance demo shows the autonomous mode, where the car uses the HC-SR04 ultrasonic sensor to detect obstacles and reposition itself without direct steering commands.
-
-<p align="center">
-  <a href="assets/bt-smart-car-obstacle-avoidance-demo.mov">
-    <img src="assets/obstacle-avoidance-demo-frame.jpg" width="420" alt="Obstacle avoidance demo frame" />
-  </a>
-</p>
-
-<p align="center">
-  <strong>Video:</strong> <a href="assets/bt-smart-car-obstacle-avoidance-demo.mov">bt-smart-car-obstacle-avoidance-demo.mov</a>
-</p>
 
 ---
 
@@ -121,7 +89,7 @@ The implementation includes several safety-oriented behaviors:
 - Arduino Uno
 - ATmega328P microcontroller
 - PWM motor and servo control
-- Timer-based control logic
+- timer-based control logic
 - USB Host Shield communication
 - Bluetooth HID controller input
 
@@ -133,7 +101,7 @@ The implementation includes several safety-oriented behaviors:
 - USB Bluetooth receiver
 - Gravity IO Expansion Shield
 - L298N dual H-bridge motor driver
-- 2x DC motors, 3-6V
+- 2x DC motors, 3–6V
 - MG90S servo motor
 - HC-SR04 ultrasonic sensor
 - 2x LEDs for headlights
@@ -146,59 +114,23 @@ The implementation includes several safety-oriented behaviors:
 
 ## Component Gallery
 
-### Arduino Uno
-
-The Arduino Uno, based on the ATmega328P microcontroller, acts as the central control unit for the project.
-
-<p align="center">
-  <img src="assets/arduino-uno.png" width="420" alt="Arduino Uno" />
-</p>
-
-### Motor Driver and DC Motors
-
-The L298N dual H-bridge motor driver controls the direction and speed of the two DC motors. PWM is used to provide smoother speed control.
-
-<p align="center">
-  <img src="assets/l298n-motor-driver.png" width="300" alt="L298N motor driver" />
-  <img src="assets/dc-motor-3-6v.png" width="300" alt="DC motor 3-6V" />
-</p>
-
-### Steering Servo
-
-The MG90S servo motor controls the steering mechanism. It is driven through PWM and returns to a neutral position when no steering command is active.
-
-<p align="center">
-  <img src="assets/mg90s-servo-motor.png" width="320" alt="MG90S servo motor" />
-</p>
-
-### Controller and Bluetooth Interface
-
-The PlayStation 5 controller provides an intuitive input interface. The USB Host Shield and USB Bluetooth receiver make it possible to connect the controller to the Arduino system.
-
-<p align="center">
-  <img src="assets/ps5-controller.png" width="340" alt="PlayStation 5 controller" />
-</p>
-
-<p align="center">
-  <img src="assets/usb-host-shield.png" width="300" alt="USB Host Shield" />
-  <img src="assets/usb-bluetooth-receiver.png" width="220" alt="USB Bluetooth receiver" />
-</p>
-
-### Expansion Shield
-
-The Gravity IO Expansion Shield expands the available I/O options and makes prototyping easier.
-
-<p align="center">
-  <img src="assets/gravity-io-expansion-shield.png" width="380" alt="Gravity IO Expansion Shield" />
-</p>
-
-### Ultrasonic Sensor
-
-The HC-SR04 ultrasonic sensor measures the distance to objects in front of the car and provides the main input for obstacle avoidance.
-
-<p align="center">
-  <img src="assets/hc-sr04-ultrasonic-sensor.png" width="420" alt="HC-SR04 ultrasonic sensor" />
-</p>
+<table>
+  <tr>
+    <td align="center"><img src="assets/arduino-uno.png" width="120" alt="Arduino Uno" /><br/>Arduino Uno</td>
+    <td align="center"><img src="assets/ps5-controller.png" width="130" alt="PlayStation 5 controller" /><br/>PS5 Controller</td>
+    <td align="center"><img src="assets/usb-host-shield.png" width="120" alt="USB Host Shield" /><br/>USB Host Shield</td>
+    <td align="center"><img src="assets/usb-bluetooth-receiver.png" width="90" alt="USB Bluetooth receiver" /><br/>Bluetooth Receiver</td>
+  </tr>
+  <tr>
+    <td align="center"><img src="assets/gravity-io-expansion-shield.png" width="130" alt="Gravity IO Expansion Shield" /><br/>Gravity IO Shield</td>
+    <td align="center"><img src="assets/l298n-motor-driver.png" width="120" alt="L298N motor driver" /><br/>L298N Motor Driver</td>
+    <td align="center"><img src="assets/dc-motor-3-6v.png" width="130" alt="DC motor 3-6V" /><br/>DC Motor</td>
+    <td align="center"><img src="assets/mg90s-servo-motor.png" width="120" alt="MG90S servo motor" /><br/>MG90S Servo</td>
+  </tr>
+  <tr>
+    <td align="center" colspan="4"><img src="assets/hc-sr04-ultrasonic-sensor.png" width="150" alt="HC-SR04 ultrasonic sensor" /><br/>HC-SR04 Ultrasonic Sensor</td>
+  </tr>
+</table>
 
 ---
 
@@ -207,21 +139,21 @@ The HC-SR04 ultrasonic sensor measures the distance to objects in front of the c
 The chassis was 3D-printed and designed to hold the Arduino board, shields, motor driver, battery holders, steering system, ultrasonic sensor, and other components. The layout was chosen to make wiring and component replacement easier.
 
 <p align="center">
-  <img src="assets/chassis-main-part.png" width="360" alt="Main 3D printed chassis part" />
+  <img src="assets/chassis-main-part.png" width="300" alt="Main 3D printed chassis part" />
 </p>
 
 Additional printed parts were used for the steering system and structural mounting points.
 
 <p align="center">
-  <img src="assets/chassis-steering-link.png" width="280" alt="3D printed steering link" />
-  <img src="assets/chassis-top-plate.png" width="280" alt="3D printed chassis top plate" />
+  <img src="assets/chassis-steering-link.png" width="220" alt="3D printed steering link" />
+  <img src="assets/chassis-top-plate.png" width="220" alt="3D printed chassis top plate" />
 </p>
 
 The Arduino Uno is mounted on the chassis, with the USB Host Shield and Gravity IO Expansion Shield stacked above it. The front section contains the steering system and ultrasonic sensor.
 
 <p align="center">
-  <img src="assets/chassis-assembly-arduino-stack.jpg" width="360" alt="Arduino stack mounted on chassis" />
-  <img src="assets/chassis-assembly-front-steering.jpg" width="360" alt="Front steering assembly" />
+  <img src="assets/chassis-assembly-arduino-stack.jpg" width="320" alt="Arduino stack mounted on chassis" />
+  <img src="assets/chassis-assembly-front-steering.jpg" width="320" alt="Front steering assembly" />
 </p>
 
 ---
@@ -247,8 +179,6 @@ This mapping creates a natural driving experience, with analog trigger accelerat
 ## Software Architecture
 
 The code was designed with a modular structure. Each major hardware area has dedicated logic, making the system easier to understand, test, and extend.
-
-### Main Software Modules
 
 ```text
 Controller input handling
@@ -324,51 +254,16 @@ Key results:
 
 ## Future Improvements
 
-The project can be extended in several directions.
+The project can be extended in several directions:
 
-### Optical Sensor for 2D Localization
-
-An optical mouse-style sensor could be used to track the car’s position indoors.
-
-<p align="center">
-  <img src="assets/optical-mouse-sensor.jpg" width="420" alt="Optical mouse sensor for 2D localization" />
-</p>
-
-### Stoplights and Turning Signals
-
-Additional LEDs could be added for brake lights and turn signals, improving the realism of the prototype.
-
-### Point-of-View Camera Streaming
-
-A camera could be added to stream the car’s point of view, allowing remote driving even when the car is outside the user’s direct line of sight.
-
-<p align="center">
-  <img src="assets/raspberry-pi-and-arduino-camera.jpg" width="420" alt="Raspberry Pi Camera and Arduino camera" />
-</p>
-
-### Return-to-Home Mode
-
-A future mode could let the user set a home position and command the car to return there using the obstacle avoidance system.
-
-### Rotating Ultrasonic Sensor
-
-Mounting the ultrasonic sensor on an additional servo motor would allow the car to scan the environment without rotating the entire vehicle.
-
-### 5G Control Expansion
-
-A future version could expand the control range through a 5G module, while keeping Bluetooth control for indoor usage.
-
-<p align="center">
-  <img src="assets/sim8200ea-5g-hat.png" width="420" alt="SIM8200EA-M2 5G HAT" />
-</p>
-
-### Alternative Control Boards
-
-The project could move to an Arduino Mega for more ports or to a Raspberry Pi for more advanced networking and media capabilities.
-
-<p align="center">
-  <img src="assets/arduino-mega-and-raspberry-pi.jpg" width="520" alt="Arduino Mega and Raspberry Pi" />
-</p>
+- add an optical sensor for indoor 2D localization;
+- add stoplights and turning signals;
+- add a point-of-view camera for remote driving;
+- create a return-to-home mode;
+- mount the ultrasonic sensor on a rotating servo;
+- improve the obstacle-avoidance algorithm;
+- explore an Arduino Mega or Raspberry Pi version for additional I/O and networking capabilities;
+- extend the control range through a 5G-based communication layer.
 
 ---
 
