@@ -1,2 +1,3 @@
+# Count the overview metadata file as C++
 project_overview.cpp linguist-detectable=true
 project_overview.cpp linguist-language=C++
