@@ -1,3 +1,5 @@
+
+
 # Bluetooth Smart Car with Obstacle Avoidance Capabilities - Public Overview
 
 Public technical overview of an Arduino-based Bluetooth smart car controlled with a PlayStation 5 controller. The project includes manual driving, analog acceleration, steering control, headlights, safety behavior, and an autonomous obstacle-avoidance mode using an ultrasonic sensor.
@@ -7,9 +9,11 @@ Public technical overview of an Arduino-based Bluetooth smart car controlled wit
 </p>
 
 <p align="center">
-  <a href="assets/bt-smart-car-manual-control-demo.mov">Manual control demo</a> ·
-  <a href="assets/bt-smart-car-obstacle-avoidance-demo.mov">Obstacle avoidance demo</a>
+  <a href=https://github.com/user-attachments/assets/d0e8710e-04a5-4467-ba75-e9c4699e6d67>Manual control demo</a> ·
+  <a href=https://github.com/user-attachments/assets/47ea8891-b305-4096-ac5c-5ad1a4ba3f4d>Obstacle avoidance demo</a>
 </p>
+
+
 
 > The full source code is private due to intellectual property considerations. This repository documents the project’s functionality, architecture, technologies, hardware setup, demo media, and implementation approach without exposing private source code, generated files, or internal Git history.
 
