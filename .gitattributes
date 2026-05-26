@@ -1,0 +1,12 @@
+*.md linguist-detectable=false
+*.pdf linguist-detectable=false
+*.png linguist-detectable=false
+*.jpg linguist-detectable=false
+*.jpeg linguist-detectable=false
+*.mp4 linguist-detectable=false
+*.mov linguist-detectable=false
+assets/** linguist-detectable=false
+docs/** linguist-detectable=false
+
+project_overview.cpp linguist-detectable=true
+project_overview.cpp linguist-language=C++
